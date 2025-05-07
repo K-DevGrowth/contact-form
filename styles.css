@@ -1,0 +1,117 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Green-200-lighter: hsl(148, 38%, 91%);
+    --Green-600-medium: hsl(169, 82%, 27%);
+    --Red: hsl(0, 66%, 54%);
+    --White: hsl(0, 0%, 100%);
+    --Grey-500-medium: hsl(186, 15%, 59%);
+    --Grey-900-darker: hsl(187, 24%, 22%);
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    background-color: var(--Green-200-lighter);
+    padding: 25px;
+}
+
+form {
+    background-color: var(--White);
+    max-width: 600px;
+    padding: 25px;
+    margin: 40px auto;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin: 10px 0;
+
+}
+
+.query-group .form-group {
+    border: 1px solid var(--Grey-500-medium);
+    border-radius: 5px;
+    padding: 15px;
+    grid-template-columns: 20px 1fr !important;
+    gap: 10px !important;
+}
+
+.query-group .form-group label,
+.query-group .form-group input {
+    cursor: pointer;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid var(--Grey-500-medium);
+}
+
+input:hover,
+textarea:hover {
+    border-color: var(--Green-600-medium);
+}
+
+input:focus,
+textarea:focus {
+    outline-color: var(--Green-600-medium);
+    border: var(--Green-600-medium);
+}
+
+.radio-btn {
+    accent-color: var(--Green-600-medium);
+}
+
+.form-group:has(input[type='radio']:checked) {
+    background-color: var(--Green-200-lighter);
+}
+
+small {
+    color: var(--Red);
+    display: none;
+}
+
+button {
+    background-color: var(--Green-600-medium);
+    color: var(--White);
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+    font-weight: 700;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: hsl(169, 81%, 15%);
+}
+
+.consent {
+    grid-template-columns: 20px 1fr !important;
+    gap: 10px !important;
+    accent-color: var(--Green-600-medium);
+}
+
+.grid-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.flex-box {
+    display: flex;
+    align-items: center;
+}
+
+input,
+button {
+    font: inherit;
+}
