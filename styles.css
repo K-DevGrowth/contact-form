@@ -24,7 +24,7 @@ form {
     background-color: var(--White);
     max-width: 600px;
     padding: 25px;
-    margin: 40px auto;
+    margin: 30px auto;
     border-radius: 10px;
 }
 
@@ -75,7 +75,6 @@ textarea:focus {
 
 small {
     color: var(--Red);
-    display: none;
 }
 
 button {
@@ -88,6 +87,7 @@ button {
     font-weight: 700;
     margin-top: 10px;
     cursor: pointer;
+    transition: 0.3s ease-out;
 }
 
 button:hover {
@@ -114,4 +114,39 @@ button:hover {
 input,
 button {
     font: inherit;
+}
+
+small.active {
+    display: none;
+}
+
+span {
+    display: none;
+    background-color: var(--Grey-900-darker);
+    color: var(--White);
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+    font-weight: 700;
+    margin-top: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.3s ease-in;
+}
+
+span:hover {
+    opacity: 0.8;
+}
+
+span.show {
+    display: block;
+}
+
+@media (max-width: 426px) {
+    .grid-box {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0px;
+    }
 }
